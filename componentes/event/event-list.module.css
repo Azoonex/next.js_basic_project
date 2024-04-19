@@ -1,7 +1,14 @@
-.ulitems{
+.ulitems {
     width: 100%;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 10px;
+}
+
+.ulitems > li {
+    box-shadow: 3px  2px 3px   black;
+    border-radius: 5px;
 }
