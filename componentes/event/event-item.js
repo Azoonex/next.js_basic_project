@@ -4,6 +4,7 @@ import DateIcon from "../icons/date-icon";
 import AddressIcon from "../icons/address-icon";
 import ArrowIcon from "../icons/arrow-icon";
 import Image from "next/image";
+import Button from "../ui/button";
 
 function EventItem(props) {
     const { title, image, date, location, id } = props;
@@ -35,11 +36,9 @@ function EventItem(props) {
                 <AddressIcon />
                 {location}
             </address>
-            <Link className={classes.link} href={expolerLink}>
-                <span>
-                    <ArrowIcon />
-                </span>
-                Expolor Event</Link>
+            <Button link={expolerLink}>
+                Expoler Id
+            </Button>
         </div>
     </li>
 }
