@@ -1,4 +1,8 @@
 import Link from "next/link"
+import classes from './event-item.module.css'
+import DateIcon from "../icons/date-icon";
+import AddressIcon from "../icons/address-icon";
+import ArrowIcon from "../icons/arrow-icon";
 
 function EventItem(props) {
     const { title, image, date, location, id } = props;
@@ -15,19 +19,29 @@ function EventItem(props) {
     const expolerLink = `/events/${id}`;
 
     return <li>
-        <img src={'/' + image} alt={title} />
+        <img  width={100} src={'/' + image} alt={title} />
         <div>
             <div>
                 <h2>{title}</h2>
                 <div>
-                    <time>{humanReadableDate}</time>
+                    <time>
+                        <DateIcon />
+                        {humanReadableDate}
+                        </time>
                 </div>
                 <div>
-                    <address>{location}</address>
+                    <address>
+                        <AddressIcon />
+                        {location}
+                        </address>
                 </div>
             </div>
             <div>
-                <Link href={expolerLink}>Expolor Event</Link>
+                <Link className={classes.link} href={expolerLink}>
+                    <span>
+                        <ArrowIcon />
+                    </span>
+                    Expolor Event</Link>
             </div>
         </div>
     </li>

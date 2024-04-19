@@ -1,0 +1,5 @@
+.link{
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    color: rgb(129, 129, 230);
+}
