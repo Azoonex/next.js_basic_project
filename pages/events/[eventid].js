@@ -14,6 +14,6 @@ export default function PagePageEventDanmic() {
   }
 
   return (
-    <Eventid descrption={event.description} title={event.title} data={event.date} address={event.location} image={event.image} imagAlt={event.title} />
+    <Eventid descrption={event.description} title={event.title} date={event.date} address={event.location} image={event.image} imagAlt={event.title} />
   )
 }

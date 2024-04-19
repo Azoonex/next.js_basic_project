@@ -1,6 +1,8 @@
 import Image from "next/image"
 import DateIcon from "../icons/date-icon"
 import AddressIcon from "../icons/address-icon"
+import classes from './eventid.module.css'
+
 
 function Eventid(props) {
     const { title,
@@ -11,20 +13,22 @@ function Eventid(props) {
         imagAlt } = props
 
     return (
-        <section>
+        <section className={classes.container}>
             <nav>{title}</nav>
-            <div className="">
-                <Image src={"/" + image} width={100} height={100} alt={imagAlt} />
-                <div>
-                    <h2>
-                        <DateIcon />
-                        {date}
-                    </h2>
-                    <h2>
-                        <AddressIcon />
-                        {address}
-                    </h2>
-                </div>
+            <div>
+                <Image src={"/" + image} width={120} height={120} alt={imagAlt} />
+               
+                    <div className={classes.contet_text}>
+                        <h2>
+                            <DateIcon />
+                            {date}
+
+                        </h2>
+                        <h2>
+                            <AddressIcon />
+                            {address}
+                        </h2>
+                    </div>
             </div>
             <p>
                 {descrption}
