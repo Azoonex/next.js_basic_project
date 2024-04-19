@@ -1,13 +1,23 @@
 import Link from 'next/link'
-import styles from './button.module.css'
+import classes from './button.module.css'
 export default function Button(props) {
-    const { link, children } = props
-    return (
-        <Link href={link}>
-            <button className={styles.btn}>
-                {children}
-            </button>
-        </Link>
+    const { link, children, onclick } = props
 
+    if(link){
+        return (
+            <Link href={link}>
+                <button className={classes.btn}>
+                    {children}
+                </button>
+            </Link>
+
+        )
+    }
+
+    return (
+        <button onClick={onclick} className={classes.btn_click}>
+            {children}
+        </button>
     )
+    
 }

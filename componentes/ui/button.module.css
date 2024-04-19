@@ -10,3 +10,12 @@
 .btn:hover{
     opacity: .8;
 }
+
+.btn_click{
+    padding-block: 5px;
+    margin-top: 5px;
+    padding-inline: 20px;
+    background:#8a2be2;
+    color: #fff;
+    width: 50%;
+}
