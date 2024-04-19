@@ -1,17 +1,19 @@
+import Eventid from "@/componentes/event/eventidcontent";
 import { getEventById } from "@/dummy-data";
 import { useRouter } from "next/router"
 
 
 export default function PagePageEventDanmic() {
   const router = useRouter();
-  const evenetId = router.query.eventId;
+  const evenetId = router.query.eventid;
   const event = getEventById(evenetId)
+  
 
   if(!event){
     return <h3>not found</h3>
   }
 
   return (
-    <div>PagePageEventDanmic</div>
+    <Eventid descrption={event.description} title={event.title} data={event.date} address={event.location} image={event.image} imagAlt={event.title} />
   )
 }
