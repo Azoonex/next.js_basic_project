@@ -12,10 +12,10 @@
 }
 
 .btn_click{
-    padding-block: 5px;
+    padding-block: 10px;
     margin-top: 5px;
-    padding-inline: 20px;
+    padding-inline: 30px;
     background:#8a2be2;
     color: #fff;
-    width: 50%;
+    width: 100%;
 }

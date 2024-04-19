@@ -53,3 +53,9 @@ export function getFilteredEvents(dateFilter) {
 export function getEventById(id) {
     return DUMMY_EVENTS.find((event) => event.id === id);
 }
+
+const allMonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December", "Months", "Calendar"];
+
+export function allMonths() {
+    return allMonth
+}
