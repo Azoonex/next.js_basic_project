@@ -13,6 +13,7 @@ export default function MianPageEvent() {
     router.push(fullPath)
   }
 
+
   return (
     <div className="bg-green-200 py-2 grid grid-cols-1 place-items-center">
       <EventSearch onSreach={findEventHandler} />

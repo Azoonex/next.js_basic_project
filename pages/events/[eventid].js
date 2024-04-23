@@ -9,6 +9,7 @@ export default function PagePageEventDanmic() {
   const event = getEventById(evenetId)
   
 
+
   if(!event){
     return <h3>not found</h3>
   }
