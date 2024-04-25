@@ -4,6 +4,11 @@ function ProductsDetailPage(props) {
 
     const {loadedProduct} = props
 
+    // fallback coruse 185 //TODO:
+    if(!loadedProduct){
+        return <h1>Loadding ...</h1>
+    }
+
     return <>
         <h1>{loadedProduct.id}</h1>
         <p>{loadedProduct.description}</p>
@@ -34,6 +39,6 @@ export async function getStaticPaths(){
             {params : {pid: "p3"}},
             {params : {pid: "p4"}},
         ],
-        fallback: false
+        fallback: true // 'fallback' not use if there was data ui loading
     }
 }
