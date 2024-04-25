@@ -1,30 +1,41 @@
 import { Inter } from "next/font/google";
-import fs from "fs/promises"
-import path from "path";
+import { dataProduct } from "@/data/dummy-backend";
+import { Fragment } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home(props) {
-  const {product} = props;
-  // product maping and fetchin for ssg
+
+  const {products} = props;
+
   return (
     <main className={`${inter.className}`}>
       <h1 className="text-5xl">main create page Home</h1>
+      <h4>SSG</h4>
+      <ul className="m-20 ">
+      {products.map(i => (
+        <Fragment>
+       <li className="flex gap-1 text-blue-700 cursor-pointer">
+            <li className="">{i.title}</li>
+            <li className="">{i.id}</li>
+       </li>
+        </Fragment>
+      ))}
+      </ul>
     </main>
   );
 }
 
-export async function getStaticProps () {
-  const filePath = path.join(process.cwd(),'data','dummy-backend.json');
-  const jsonData = await fs.readFile(filePath);
-  const data = JSON.parse(jsonData)
 
+export async function getStaticProps() {
+  const  data  = dataProduct
+  
   return {
     props: {
-      product: [
-        {id: 1,title: 'lab top'},
-        {id: 2,title: 'phone'},
-      ]
-    }
+      products : data
+    },
+    revalidate: 300
   }
 }
+
+
