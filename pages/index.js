@@ -17,11 +17,11 @@ export default function Home(props) {
       {products.map(i => (
         <Fragment>
        <li className="flex gap-1 text-blue-700 cursor-pointer">
-              <Link href={`${i.id}`}>
             <li className="">
+              <Link href={`${i.id}`}>
                 {i.title}
-            </li>
               </Link>
+            </li>
             <li className="">{i.id}</li>
        </li>
         </Fragment>

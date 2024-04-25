@@ -16,7 +16,7 @@ export async function getStaticProps(context){
     const {params} = context;
     const productId = params.pid;
 
-    const product = dataProduct.find(p => p.id === productId)
+    const product = dataProduct.find(p => p.id === productId) // => obj for finding and sending in props checked const productId = params.pid //IMPORTANT// UNDERSTAEN NEXT FORE PAGE SSG PRODUCT ID
 
     return {
         props: {
@@ -24,4 +24,16 @@ export async function getStaticProps(context){
         }
     }
 
+}
+
+export async function getStaticPaths(){
+    return{
+        paths: [
+            {params : {pid: "p1"}},
+            {params : {pid: "p2"}},
+            {params : {pid: "p3"}},
+            {params : {pid: "p4"}},
+        ],
+        fallback: false
+    }
 }
