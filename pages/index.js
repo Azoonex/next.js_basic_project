@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import { dataProduct } from "@/data/dummy-backend";
 import { Fragment } from "react";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,11 @@ export default function Home(props) {
       {products.map(i => (
         <Fragment>
        <li className="flex gap-1 text-blue-700 cursor-pointer">
-            <li className="">{i.title}</li>
+              <Link href={`${i.id}`}>
+            <li className="">
+                {i.title}
+            </li>
+              </Link>
             <li className="">{i.id}</li>
        </li>
         </Fragment>

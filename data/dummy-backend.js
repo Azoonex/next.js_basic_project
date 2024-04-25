@@ -1,8 +1,8 @@
 export const dataProduct = [
-    { id: "p1", title: "labtop" },
-    { id: "p2", title: "phone" },
-    { id: "p3", title: "cool pad" },
-    { id: "p4", title: "notbook" }
+    { id: "p1", title: "labtop",description: "This is products 1" },
+    { id: "p2", title: "phone", description: "This is products 2" },
+    { id: "p3", title: "cool pad", description: "This is products 3" },
+    { id: "p4", title: "notbook", description: "This is products 4" }
 ]
 
 
