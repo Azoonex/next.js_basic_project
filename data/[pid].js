@@ -34,8 +34,9 @@ export async function getStaticProps(context) {
 export async function getStaticPaths() {
     const data = await dataProduct;
     const pId = data.map(p => p.id)
+    const params = pId.map(i => ({ params: { i } })) // create obj send paramse in paths
 
-    const params = pId.map(i => ({ params: { i } }))
+
 
     return {
         paths: params,
