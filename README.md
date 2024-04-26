@@ -41,3 +41,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 create ui and datils ui and navbar
 #then next not think use pagessg for getstaticprops ok,not some page!,We have the understande her
+
+#get start ssr
+
+\\tow forms pre-rendreing static gernation and sever side rendering course 188
