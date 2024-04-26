@@ -3,6 +3,10 @@ import { dataProduct } from "@/data/dummy-backend";
 
 export default function ProdcutsId(props) {
     const { products } = props;
+
+    if(!products){
+        return {notfound : true}
+    }
     // product maping and fetchin for ssg
     return (
         <main className={`${inter.className}`}>
@@ -40,6 +44,6 @@ export async function getStaticPaths() {
 
     return {
         paths: params,
-        fallback: 'blocking'
+        fallback: true
     }
 }
