@@ -45,3 +45,4 @@ create ui and datils ui and navbar
 #get start ssr
 
 \\tow forms pre-rendreing static gernation and sever side rendering course 188
+<!-- you are not use ssr how work fetch api ! in react for useeffect -->
