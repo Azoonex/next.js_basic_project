@@ -5,6 +5,13 @@ export const dataProduct = [
     { id: "p4", title: "notbook", description: "This is products 4" }
 ]
 
+export function allDataPorducts() {
+    return dataProduct
+}  
+
+export function getDataProductID(eventId) {
+    return dataProduct.find(i => i.id === eventId)
+}
 
 export const navlink = [
     "home", "info", "link", "pages"
