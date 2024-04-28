@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import { dataProduct } from "@/data/dummy-backend";
-import Head from "next/head";
 import Link from "next/link";
+import { headeTitle } from "@/src/Heade/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,10 +11,7 @@ export default function Home(props) {
 
   return (
     <main className={`${inter.className}`}>
-      <Head>
-        <title>this is nextjs title</title>
-        <meta name="descrption" content="next js bast frame work!"  />
-      </Head>
+     {headeTitle("context main page title","this is bast course")}
       <h1 className="text-5xl">main create page Home</h1>
       <h4>SSG</h4>
       {products.map(i => (
