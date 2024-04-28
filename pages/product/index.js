@@ -21,3 +21,7 @@ export async function getStaticProps(context) {
 
 }
 
+// try catch
+
+
+
