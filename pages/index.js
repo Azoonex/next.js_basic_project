@@ -1,6 +1,5 @@
 import { Inter } from "next/font/google";
 import { dataProduct } from "@/data/dummy-backend";
-import { Fragment } from "react";
 import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });

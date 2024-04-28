@@ -31,30 +31,3 @@ const DUMMY_EVENTS = [
     },
 ];
 
-export function getFeaturedEvents() {
-    return DUMMY_EVENTS.filter((event) => event.isFeatured);
-}
-
-export function getAllEvents() {
-    return DUMMY_EVENTS;
-}
-
-export function getFilteredEvents(year, month) {
-    
-    let filteredEvents = DUMMY_EVENTS.filter((event) => {
-        const eventDate = new Date(event.date);
-        return eventDate.getFullYear() === year && eventDate.getMonth() === month - 1;
-    });
-
-    return filteredEvents;
-}
-
-export function getEventById(id) {
-    return DUMMY_EVENTS.find((event) => event.id === id);
-}
-
-const allMonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December", "Months", "Calendar"];
-
-export function allMonths() {
-    return allMonth
-}
