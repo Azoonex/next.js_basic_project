@@ -29,5 +29,15 @@ const DUMMY_EVENTS = [
         image: 'images/extrovert-event.jpg',
         isFeatured: true,
     },
+    {
+        id: 'e4',
+        title: 'Networking for extroverts thing fork',
+        description:
+            ' bast optionsYou probably need no help with networking in general. But focusing your energy correctly - that is something where most people can improve.',
+        location: 'My Street 12, 10115 Broke City iran',
+        date: '2022-04-10',
+        image: 'images/extrovert-event.jpg',
+        isFeatured: true,
+    },
 ];
 
