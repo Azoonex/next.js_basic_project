@@ -30,11 +30,11 @@ export default function EventidAll() {
   }
 
   console.log(getFilteredEvents(2021, 2))
-  
+
 
   return (
     <Fragment>
-        
+
     </Fragment>
   )
 }

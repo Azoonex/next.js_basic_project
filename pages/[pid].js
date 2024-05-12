@@ -2,7 +2,8 @@ import { dataProduct } from "@/data/dummy-backend"
 
 function ProductsDetailPage(props) {
 
-    const {loadedProduct} = props
+    const {loadedProduct} = props;
+
 
     // fallback coruse 185 //TODO:
     if(!loadedProduct){
@@ -22,16 +23,19 @@ export async function getStaticProps(context){
     const productId = params.pid;
 
     const product = dataProduct.find(p => p.id === productId) // => obj for finding and sending in props checked const productId = params.pid //IMPORTANT// UNDERSTAEN NEXT FORE PAGE SSG PRODUCT ID
+   
 
     return {
         props: {
             loadedProduct: product
-        }
+        },
+        revalidate : 10,
     }
 
 }
 
 export async function getStaticPaths(){
+
     return{
         paths: [
             {params : {pid: "p1"}},
@@ -39,6 +43,7 @@ export async function getStaticPaths(){
             {params : {pid: "p3"}},
             {params : {pid: "p4"}},
         ],
-        fallback: true // 'fallback' not use if there was data ui loading
+        fallback: false,
     }
+    
 }

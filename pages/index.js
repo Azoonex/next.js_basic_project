@@ -37,7 +37,7 @@ export async function getStaticProps() {
     props: {
       products: data
     },
-    revalidate: 300
+    revalidate: 300 // revalidate / invailed / invalied / invalied / invalied / occured 
   }
 }
 
